@@ -38,6 +38,11 @@ namespace Engine.Controller
             , AnimationBase.AnimationSinglelineSourceRectangle(framesNum, delayMillis, rectangle));
         }
 
+        public void Update(GameTime gameTime)
+        {
+            animationBase.Update(gameTime);
+        }
+
         public void Draw(SpriteBatch spriteBatch, Vector2 position, bool drawMirroredHorizontal = false, bool drawMirroredVertical = false)
         {
             animationBase.Draw(spriteBatch, texture, position, drawMirroredHorizontal, drawMirroredVertical);
