@@ -1,0 +1,47 @@
+﻿[
+  {
+    "TextureName": "barracks",
+    "VisibleRectangle": {
+      "X": 100,
+      "Y": 100,
+      "Width": 192,
+      "Height": 192
+    }
+  },
+  {
+    "TextureName": "church",
+    "VisibleRectangle": {
+      "X": 1,
+      "Y": 200,
+      "Width": 128,
+      "Height": 146
+    }
+  },
+  {
+    "TextureName": "firestation",
+    "VisibleRectangle": {
+      "X": 300,
+      "Y": 100,
+      "Width": 128,
+      "Height": 128
+    }
+  },
+  {
+    "TextureName": "herbary",
+    "VisibleRectangle": {
+      "X": 200,
+      "Y": 200,
+      "Width": 192,
+      "Height": 192
+    }
+  },
+  {
+    "textureName": "weaponsmith",
+    "visibleRectangle": {
+      "X": 400,
+      "Y": 200,
+      "Width": 128,
+      "Height": 128
+    }
+  }
+]
