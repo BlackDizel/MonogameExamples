@@ -1,0 +1,31 @@
+﻿<Window x:Class="server.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+    <StackPanel Width="200" Height="200">
+        <TextBox Name="tb"/>
+        <Button Content="send"  Click="ButtonClickSendMessage"/>
+        
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Content="stop" Grid.Column="1" Grid.Row="1"  Click="send_stop"/>
+            <Button Content="move left" Grid.Column="0" Grid.Row="1"  Click="send_move_left"/>
+            <Button Content="move up" Grid.Column="1" Grid.Row="0"  Click="send_move_up"/>
+            <Button Content="move right" Grid.Column="2" Grid.Row="1" Click="send_move_right"/>
+            <Button Content="move down" Grid.Column="1" Grid.Row="2" Click="send_move_down"/>
+
+        </Grid>
+        <TextBlock Text="status" Name="tbStatus"/>
+    </StackPanel>
+</Window>
