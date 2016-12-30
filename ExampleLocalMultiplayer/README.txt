@@ -1,0 +1,1 @@
+﻿tank sprite created by user supercow300 from http://forums.rpgmakerweb.com/index.php?/topic/16591-trooper-npcenemy-sprite-and-tank/  
