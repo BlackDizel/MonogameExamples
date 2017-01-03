@@ -44,13 +44,13 @@ namespace Engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameController.Instance.GraphicDevice = GraphicsDevice;
 
-//            //поддерживаемые в приложении жесты
-//            TouchPanel.EnabledGestures = GestureType.Tap | GestureType.FreeDrag | GestureType.DragComplete;
-//            //windows
-//#if !WINDOWS_PHONE
-//            IsMouseVisible = true;
-//#endif
-//            //MY LOAD END Block
+            //            //поддерживаемые в приложении жесты
+            //            TouchPanel.EnabledGestures = GestureType.Tap | GestureType.FreeDrag | GestureType.DragComplete;
+            //            //windows
+            //#if !WINDOWS_PHONE
+            //            IsMouseVisible = true;
+            //#endif
+            //            //MY LOAD END Block
         }
 
         protected override void UnloadContent()
@@ -64,6 +64,8 @@ namespace Engine
             if (GameController.Instance.CurrentScreen != null)
                 GameController.Instance.CurrentScreen.UpdateScreen(gameTime);
             userInput(gameTime);
+
+            if (GameController.Instance.IsExit) Exit();
             base.Update(gameTime);
         }
 
@@ -82,8 +84,6 @@ namespace Engine
                     gamepadStates[i] = GamePad.GetState(i);
             }
 
-            checkExit();
-
             if (GameController.Instance.CurrentScreen != null)
                 GameController.Instance.CurrentScreen.Input(keyboardState
                     , mouseState
@@ -99,24 +99,6 @@ namespace Engine
 
         }
 
-        private void checkExit()
-        {
-            if (GameController.Instance.CurrentScreen != null)
-                if (GameController.Instance.CurrentScreen == GameController.Instance.StartScreen)
-                {
-                    if ((keyboardState.IsKeyUp(Keys.Escape)) && (GameController.Instance.SavedKeyboardState.IsKeyDown(Keys.Escape)))
-                        Exit();
-
-                    if (gamepadStates != null
-                        && gamepadStates.Length > 0
-                        && GameController.Instance.SavedGamepadStates != null
-                        && GameController.Instance.SavedGamepadStates.Length > 0
-                        && gamepadStates[0].Buttons.Back == ButtonState.Pressed
-                        && GameController.Instance.SavedGamepadStates[0].Buttons.Back == ButtonState.Released)
-                        Exit();
-                }
-        }
-
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
@@ -125,7 +107,7 @@ namespace Engine
 
             if (GameController.Instance.CurrentScreen != null)
                 GameController.Instance.CurrentScreen.DrawScreen(spriteBatch);
-            
+
             spriteBatch.End();
 
             base.Draw(gameTime);

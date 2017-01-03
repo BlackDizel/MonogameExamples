@@ -26,6 +26,7 @@ namespace Engine.Model
         private GameController()
         {
             Random = new Random();
+            isExit = false;
         }
 
         public MouseState SavedMouseState;
@@ -80,5 +81,13 @@ namespace Engine.Model
         }
 
         public Microsoft.Xna.Framework.Matrix View { get; set; }
+
+        public bool IsExit { get { return isExit; } }
+
+        private bool isExit;
+        public void exit()
+        {
+            isExit = true;
+        }
     }
 }
