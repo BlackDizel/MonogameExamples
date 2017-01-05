@@ -1,0 +1,110 @@
+﻿{
+  "data": {
+    "title": "welcome"
+  },
+  "childs": [
+    {
+      "data": {
+        "title": "new game"
+      },
+      "childs": [
+        {
+          "data": {
+            "title": "easy"
+          }
+        },
+        {
+          "data": {
+            "title": "medium"
+          }
+        },
+        {
+          "data": {
+            "title": "hard"
+          }
+        },
+        {
+          "data": {
+            "title": "nightmare"
+          }
+        },
+        {
+          "data": {
+            "title": "deadly"
+          }
+        },
+        {
+          "data": {
+            "title": "hell"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "title": "continue"
+      },
+      "childs": [
+        {
+          "data": {
+            "title": "from last checkpoint"
+          }
+        },
+        {
+          "data": {
+            "title": "from chapter start"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "title": "options"
+      },
+      "childs": [
+        {
+          "data": {
+            "title": "video"
+          }
+        },
+        {
+          "data": {
+            "title": "audio"
+          }
+        },
+        {
+          "data": {
+            "title": "controls"
+          },
+          "childs": [
+            {
+              "data": {
+                "title": "keyboard and mouse"
+              }
+            },
+            {
+              "data": {
+                "title": "gamepad"
+              }
+            },
+            {
+              "data": {
+                "title": "touch"
+              }
+            }
+          ]
+        },
+        {
+          "data": {
+            "title": "about"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "title": "exit"
+      }
+    }
+  ]
+}
