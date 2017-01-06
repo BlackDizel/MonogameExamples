@@ -39,7 +39,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controller\ControllerDialog.cs" />
-    <Compile Include="Game1.cs" />
     <Compile Include="Model\ModelDialog.cs" />
     <Compile Include="Model\ModelDialogStep.cs" />
     <Compile Include="Model\ModelPhraseNPC.cs" />
@@ -61,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <Content Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
