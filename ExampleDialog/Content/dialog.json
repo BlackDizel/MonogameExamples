@@ -1,0 +1,122 @@
+﻿{
+  "phrases": [
+    {
+      "id": 0,
+      "npc_phrases": [
+        {
+          "npc_id": 1,
+          "message": "Do you want a tea?"
+        },
+        {
+          "npc_id": 2,
+          "message": "or coffee?"
+        }
+      ],
+      "answers": [
+        {
+          "message": "tea",
+          "next_id": 1
+        },
+        {
+          "message": "coffee",
+          "next_id": 2
+        },
+        {
+          "message": "Scotch",
+          "next_id": 3
+        },
+        {
+          "message": "I don't want anything",
+          "next_id": 3
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "npc_phrases": [
+        {
+          "npc_id": 1,
+          "message": "Black, green, herbal or other?"
+        },
+        {
+          "npc_id": 2,
+          "message": "With lemon or milk?"
+        },
+        {
+          "npc_id": 1,
+          "message": "or honey?"
+        }
+      ],
+      "answers": [
+        {
+          "message": "Black",
+          "next_id": 4
+        },
+        {
+          "message": "Green",
+          "next_id": 4
+        },
+        {
+          "message": "Herbal",
+          "next_id": 4
+        },
+        {
+          "message": "White",
+          "next_id": 4
+        },
+        {
+          "message": "Just give me a water",
+          "next_id": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "answers": [
+        {
+          "message": "With lemon",
+          "next_id": 3
+        },
+        {
+          "message": "with milk",
+          "next_id": 3
+        },
+        {
+          "message": "with honey",
+          "next_id": 3
+        },
+        {
+          "message": "without anything",
+          "next_id": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "answers": [
+        {
+          "message": "double espresso",
+          
+        },
+        {
+          "message": "black without sugar",
+          
+        },
+        {
+          "message": "cappuccino, please",
+          
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "npc_phrases": [
+        {
+          "npc_id": 1,
+          "message": "OK, well"
+        }
+      ]
+    },
+    
+  ]
+}
