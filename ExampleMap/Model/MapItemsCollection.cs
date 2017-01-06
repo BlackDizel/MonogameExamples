@@ -1,12 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExampleMap.Model
 {
@@ -21,13 +17,13 @@ namespace ExampleMap.Model
 
         private MapItemsCollection()
         {
-            String json = readJson();
+            string json = readJson();
             items = JsonConvert.DeserializeObject<List<MapItem>>(json);
         }
 
         private string readJson()
         {
-            String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             return File.ReadAllText(path + path_data_cache);
         }
 
@@ -35,13 +31,12 @@ namespace ExampleMap.Model
         {
             if (items == null) return;
             items.ForEach(o => o.Texture = content.Load<Texture2D>(o.TextureName));
-
         }
 
         internal void Draw(SpriteBatch spriteBatch)
         {
             if (items == null) return;
-            items.ForEach(o=> spriteBatch.Draw(texture:o.Texture,destinationRectangle:o.VisibleRectangle));
+            items.ForEach(o => spriteBatch.Draw(texture: o.Texture, destinationRectangle: o.VisibleRectangle));
         }
     }
 }
