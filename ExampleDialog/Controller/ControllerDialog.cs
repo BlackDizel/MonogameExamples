@@ -1,7 +1,7 @@
 ﻿using ExampleDialog.Model;
 using Newtonsoft.Json;
 using System.IO;
-using System;
+using System.Collections.Generic;
 
 namespace ExampleDialog.Controller
 {
@@ -11,6 +11,7 @@ namespace ExampleDialog.Controller
         private ModelDialog dialog;
         private ModelDialogStep currentDialogStep;
         private int selectedAnswerIndex;
+        public Dictionary<int, int?> DialogHistory;
 
         public int SelectedAnswerIndex { get { return selectedAnswerIndex; } }
 
@@ -40,6 +41,7 @@ namespace ExampleDialog.Controller
             if (json == null) return;
             dialog = JsonConvert.DeserializeObject<ModelDialog>(json);
             currentDialogStep = firstDialogStep();
+            DialogHistory = new Dictionary<int, int?>();
         }
 
         private ModelDialogStep firstDialogStep()
@@ -114,6 +116,8 @@ namespace ExampleDialog.Controller
 
             int? next_id = currentDialogStep.answers[selectedAnswerIndex].next_id;
             selectedAnswerIndex = 0;
+
+            DialogHistory.Add(currentDialogStep.id, next_id);
 
             if (!next_id.HasValue)
             {
